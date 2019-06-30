@@ -1,0 +1,12 @@
+<ng-container *ngIf="(beers$ | async) as beers;">
+
+    <ng-container *ngIf="beers.length == 0" >
+        <article class="zero-beers">
+            <div>Brak piw</div>
+        </article>
+    </ng-container>
+
+    <app-beer [beer]="beer" *ngFor="let beer of beers"></app-beer>
+</ng-container>
+
+
